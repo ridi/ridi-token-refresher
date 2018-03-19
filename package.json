@@ -1,0 +1,17 @@
+{
+  "name": "ridi-token-refresher",
+  "version": "0.0.1",
+  "description": "Ridi Token Refresh Tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --no-cache",
+    "lint": "eslint -c .eslintrc.js src/**/*.js --fix"
+  },
+  "author": "Jeonggeun Kim <snorlax@ridi.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@ridi/eslint-config": "^4.0.0",
+    "eslint": "^4.19.0",
+    "jest": "^22.4.2"
+  }
+}
