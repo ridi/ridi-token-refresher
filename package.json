@@ -5,13 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --no-cache",
-    "lint": "eslint -c .eslintrc.js src/**/*.js --fix"
+    "lint": "eslint . --fix"
   },
   "author": "Jeonggeun Kim <snorlax@ridi.com>",
   "license": "MIT",
   "devDependencies": {
     "@ridi/eslint-config": "^4.0.0",
+    "babel": "^6.23.0",
+    "babel-jest": "^23.0.0-alpha.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
     "eslint": "^4.19.0",
+    "eslint-plugin-jest": "^21.15.0",
     "jest": "^22.4.2"
-  }
+  },
+  "dependencies": {}
 }
