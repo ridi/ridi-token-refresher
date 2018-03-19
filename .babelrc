@@ -1,0 +1,13 @@
+{
+  "ignore": [
+    "node_modules/**"
+  ],
+  "presets": [
+    "es2017"
+  ],
+  "plugins": [
+    "transform-es2015-classes",
+    "transform-class-properties",
+    "transform-async-to-generator"
+  ]
+}
