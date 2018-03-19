@@ -5,5 +5,6 @@ module.exports = {
   },
   'parserOptions': {
     'sourceType': 'module'
-  }
+  },
+  'plugins': ['jest']
 };
