@@ -2,7 +2,7 @@
   "name": "ridi-token-refresher",
   "version": "0.0.1",
   "description": "Ridi Token Refresh Tools",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "test": "jest --no-cache",
