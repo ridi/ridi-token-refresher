@@ -6,7 +6,9 @@
     "es2017"
   ],
   "plugins": [
-    "transform-es2015-classes",
+    ["transform-es2015-classes", {
+      "loose": true
+    }],
     "transform-class-properties",
     "transform-async-to-generator"
   ]
