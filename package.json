@@ -4,6 +4,7 @@
   "description": "Ridi Token Refresh Tools",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --config webpack.config.js",
     "test": "jest --no-cache",
     "lint": "eslint . --fix"
   },
@@ -12,14 +13,20 @@
   "devDependencies": {
     "@ridi/eslint-config": "^4.0.0",
     "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
     "babel-jest": "^23.0.0-alpha.0",
+    "babel-loader": "^7.1.4",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-classes": "^6.24.1",
     "babel-preset-es2017": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
     "eslint": "^4.19.0",
     "eslint-plugin-jest": "^21.15.0",
-    "jest": "^22.4.2"
+    "jest": "^22.4.2",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
   },
   "dependencies": {}
 }
