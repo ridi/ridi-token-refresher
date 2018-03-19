@@ -9,12 +9,12 @@ const srcPath = `${__dirname}/src`;
 module.exports = {
   context: srcPath,
   entry: {
-    ridi_token_refresher: `${srcPath}/a.js`,
+    ridi_token_refresher: `${srcPath}/index.js`,
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: '[name].[chunkhash].js',
-    chunkFilename: '[name].[chunkhash].js',
+    filename: '[name].js',
+    chunkFilename: '[name].js',
     sourceMapFilename: '[file].map',
   },
   devtool: 'source-map',
@@ -35,8 +35,8 @@ module.exports = {
     new UglifyJSPlugin({
       sourceMap: true,
       uglifyOptions: {
-        filename: '[name].[chunkhash].js',
-        url: '[name].[chunkhash].js.map',
+        filename: '[name].js',
+        url: '[name].js.map',
         compress: {
           warnings: false,
         },
