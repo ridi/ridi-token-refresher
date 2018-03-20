@@ -1,3 +1,4 @@
+/* eslint-env browser */
 
 import TokenRefresher from './TokenRefresher';
 
@@ -11,4 +12,4 @@ import TokenRefresher from './TokenRefresher';
   window.stopRefresher = () => {
     tokenRefresher.stop();
   };
-})(this);
+})(window);
