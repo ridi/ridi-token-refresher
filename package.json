@@ -22,6 +22,7 @@
     "babel-preset-es2017": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "eslint": "^4.19.0",
+    "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jest": "^21.15.0",
     "jest": "^22.4.2",
     "uglifyjs-webpack-plugin": "^1.2.4",
