@@ -3,15 +3,8 @@ import TokenRefresher from './TokenRefresher';
 
 
 ((window) => {
-  let isRunning = false;
-
+  const tokenRefresher = new TokenRefresher();
   window.run_refresher = () => {
-    if (isRunning) {
-      return;
-    }
-    isRunning = true;
-
-    const tokenRefresher = new TokenRefresher();
     tokenRefresher.run();
   };
 })(this);
