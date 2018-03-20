@@ -29,5 +29,7 @@
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.12"
   },
-  "dependencies": {}
+  "dependencies": {
+    "whatwg-fetch": "^2.0.3"
+  }
 }

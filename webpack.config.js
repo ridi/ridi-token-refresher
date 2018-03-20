@@ -1,15 +1,14 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const srcPath = `${__dirname}/src`;
-
-
-module.exports = {
+const config = {
   context: srcPath,
   entry: {
-    ridi_token_refresher: `${srcPath}/index.js`,
+    ridi_token_refresher: ['whatwg-fetch', `${srcPath}/index.js`],
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -41,9 +40,11 @@ module.exports = {
           warnings: false,
         },
       },
-    }),
+    })
   ],
   resolve: {
     extensions: ['.js'],
   },
 };
+
+module.exports = config;
