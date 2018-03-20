@@ -1,5 +1,5 @@
 
-import calcInterval from './utils';
+import { calcInterval } from './utils';
 
 
 export default class TokenRefresher {
