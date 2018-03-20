@@ -6,5 +6,5 @@ module.exports = {
   'parserOptions': {
     'sourceType': 'module'
   },
-  'plugins': ['jest']
+  'plugins': ['jest', 'import']
 };
