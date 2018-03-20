@@ -1,3 +1,7 @@
+const OFF = 0;
+const ON = 1;
+const ERROR = 2;
+
 module.exports = {
   'extends': '@ridi',
   'env': {
@@ -10,9 +14,10 @@ module.exports = {
   'rules': {
 
     // Override Rules
-    'import/prefer-default-export': 'off',
+    'class-methods-use-this': OFF,
+    'import/prefer-default-export': OFF,
     'no-param-reassign': [
-      'error',
+      ERROR,
       {
         'props': true,
         'ignorePropertyModificationsFor': ['window']
