@@ -4,11 +4,11 @@ import TokenRefresher from './TokenRefresher';
 
 ((window) => {
   const tokenRefresher = new TokenRefresher();
-  window.run_refresher = () => {
+  window.runRefresher = () => {
     tokenRefresher.run();
   };
 
-  window.stop_refresher = () => {
+  window.stopRefresher = () => {
     tokenRefresher.stop();
   };
 })(this);
