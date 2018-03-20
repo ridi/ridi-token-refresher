@@ -5,7 +5,8 @@ const ERROR = 2;
 module.exports = {
   'extends': '@ridi',
   'env': {
-    'es6': true
+    'es6': true,
+    'browser': true,
   },
   'parserOptions': {
     'sourceType': 'module'
