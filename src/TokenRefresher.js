@@ -1,5 +1,5 @@
 
-import { calcInterval } from './utils';
+import { calcInterval, getExpiresIn } from './utils';
 
 
 export default class TokenRefresher {
@@ -23,11 +23,16 @@ export default class TokenRefresher {
   }
 
   loop() {
-    // request
-    const expiresIn = 400;
-    const interval = calcInterval(expiresIn);
-
     this.stop();
+
+    let expiresIn = null;
+    try {
+      expiresIn = getExpiresIn();
+    } catch (e) {
+      return;
+    }
+
+    const interval = calcInterval(expiresIn);
     this.timeoutId = setTimeout(this.loop, interval);
   }
 
