@@ -8,7 +8,7 @@ const domainWhitelist = [
   'dev.ridi.com',
 ];
 
-export const getAccountDomain = memoize(() => {
+const getAccountDomain = memoize(() => {
   const { host } = window.location;
   for (let i = 0; i < domainWhitelist.length; i += 1) {
     if (host.include(domainWhitelist[i])) {
