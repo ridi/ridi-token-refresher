@@ -1,5 +1,5 @@
 {
-  "name": "ridi-token-refresher",
+  "name": "@ridi/ridi-token-refresher",
   "version": "0.0.1",
   "description": "Ridi Token Refresh Tools",
   "main": "src/index.js",
