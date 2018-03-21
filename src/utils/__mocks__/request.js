@@ -1,5 +1,5 @@
 
-export const getAccountDomain = () => 'ridibooks.com';
+const getAccountDomain = () => 'ridibooks.com';
 
 export const getExpiresIn = async () => {
   const response = await fetch(`https://account.${getAccountDomain()}/ridi/token/`);
