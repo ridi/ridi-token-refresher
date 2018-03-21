@@ -22,12 +22,12 @@ export default class TokenRefresher {
     this.timeoutId = null;
   }
 
-  loop() {
+  async loop() {
     this.stop();
 
     let expiresIn = null;
     try {
-      expiresIn = getExpiresIn();
+      expiresIn = await getExpiresIn();
     } catch (e) {
       return;
     }
