@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - 'node'
+
+cache: yarn
+script:
+  - make lint
+  - make test
+
+#before_deploy: make build
+#deploy:
+#  provider: npm
+#  email: developer@ridi.com
+#  api_key: $NPM_TOKEN
+#  on:
+#    tags: true
