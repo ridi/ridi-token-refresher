@@ -5,10 +5,10 @@ help:
 
 
 lint:
-	@npm run lint
+	@yarn lint
 
 test:
-	@npm run test
+	@yarn test
 
 build:
-	@npm run build
+	@yarn build
