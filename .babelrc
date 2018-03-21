@@ -3,13 +3,12 @@
     "node_modules/**"
   ],
   "presets": [
-    "es2017"
+    "es2015"
   ],
   "plugins": [
     ["transform-es2015-classes", {
       "loose": true
     }],
-    "transform-class-properties",
     "transform-async-to-generator"
   ]
 }
