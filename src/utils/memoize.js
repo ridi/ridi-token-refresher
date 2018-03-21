@@ -3,14 +3,13 @@
 const FUNC_ERROR_TEXT = 'Expected a function';
 
 export const memoize = (fn, resolver) => {
-  if (typeof fn !== 'function' || (resolver !== null && typeof resolver !== 'function')) {
+  if (typeof fn !== 'function' || (resolver && typeof resolver !== 'function')) {
     throw new TypeError(FUNC_ERROR_TEXT);
   }
 
   const memoized = (...args) => {
     const key = resolver ? resolver.apply(this, args) : args[0];
     const { cache } = memoized;
-
     if (cache.has(key)) {
       return cache.get(key);
     }
@@ -21,4 +20,4 @@ export const memoize = (fn, resolver) => {
   memoized.cache = new memoize.Cache();
   return memoized;
 };
-memoize.Cache = WeakMap;
+memoize.Cache = Map;
