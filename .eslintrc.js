@@ -13,8 +13,8 @@ module.exports = {
   },
   'plugins': ['jest', 'import'],
   'rules': {
-
     // Override Rules
+    'no-underscore-dangle': OFF,
     'class-methods-use-this': OFF,
     'import/prefer-default-export': OFF,
     'no-param-reassign': [
