@@ -3,7 +3,7 @@
 const FUNC_ERROR_TEXT = 'Expected a function';
 
 export const memoize = (fn, resolver) => {
-  if (typeof func !== 'function' || (resolver !== null && typeof resolver !== 'function')) {
+  if (typeof fn !== 'function' || (resolver !== null && typeof resolver !== 'function')) {
     throw new TypeError(FUNC_ERROR_TEXT);
   }
 
