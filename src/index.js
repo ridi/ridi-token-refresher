@@ -11,4 +11,6 @@ import TokenRefresher from './TokenRefresher';
   window.stopRefresher = () => {
     tokenRefresher.stop();
   };
+
+  window.startRefresher();
 })(window);
