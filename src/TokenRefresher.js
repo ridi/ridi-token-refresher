@@ -8,9 +8,9 @@ const RETRY_INTERVAL = 5000;
 export default class TokenRefresher {
   constructor() {
     this.timeoutId = null;
-
-    this.loop = this.loop.bind(this);
     this.retryCount = 0;
+
+    this._loop = this._loop.bind(this);
   }
 
   start() {
@@ -18,7 +18,7 @@ export default class TokenRefresher {
       return;
     }
 
-    this.timeoutId = setTimeout(this.loop, 0);
+    this.timeoutId = setTimeout(this._loop, 0);
   }
 
   stop() {
@@ -26,26 +26,26 @@ export default class TokenRefresher {
     this.timeoutId = null;
   }
 
-  async loop() {
-    this.stop();
+  isRunning() {
+    return this.timeoutId !== null;
+  }
 
+  async _loop() {
     let expiresIn = null;
     try {
       expiresIn = await getExpiresIn();
     } catch (e) {
       if (this.retryCount < MAX_RETRY_COUNT) {
         this.retryCount += 1;
-        this.timeoutId = setTimeout(this.loop, RETRY_INTERVAL);
+        this.timeoutId = setTimeout(this._loop, RETRY_INTERVAL);
+      } else {
+        this.stop();
       }
       return;
     }
 
     const interval = calcInterval(expiresIn);
     this.retryCount = 0;
-    this.timeoutId = setTimeout(this.loop, interval);
-  }
-
-  isRunning() {
-    return this.timeoutId !== null;
+    this.timeoutId = setTimeout(this._loop, interval);
   }
 }
