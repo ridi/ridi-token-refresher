@@ -21,7 +21,7 @@ const config = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules|(\.test.js)/,
+        exclude: /node_modules|__mocks__|(\.test.js)/,
         include: srcPath,
         use: {
           loader: 'babel-loader',
