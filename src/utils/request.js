@@ -11,7 +11,7 @@ const domainWhitelist = [
 const getAccountDomain = memoize(() => {
   const { host } = window.location;
   for (let i = 0; i < domainWhitelist.length; i += 1) {
-    if (host.include(domainWhitelist[i])) {
+    if (host.includes(domainWhitelist[i])) {
       return domainWhitelist[i];
     }
   }
@@ -20,7 +20,7 @@ const getAccountDomain = memoize(() => {
 }, () => 'account-domain');
 
 export const getExpiresIn = async () => {
-  const response = await fetch(`https://account.${getAccountDomain()}/ridi/token/`);
+  const response = await fetch(`https://account.${getAccountDomain()}/ridi/token/`, { method: 'POST' });
   const data = await response.json();
   return data.expires_in;
 };
