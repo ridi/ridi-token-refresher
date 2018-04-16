@@ -8,7 +8,7 @@ const srcPath = `${__dirname}/src`;
 const config = {
   context: srcPath,
   entry: {
-    ridi_token_refresher: ['babel-polyfill', 'whatwg-fetch', `${srcPath}/index.js`],
+    ridi_token_refresher: ['whatwg-fetch', `${srcPath}/index.js`],
   },
   output: {
     path: path.resolve(__dirname, './dist'),
