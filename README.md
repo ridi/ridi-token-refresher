@@ -11,7 +11,3 @@
 <script type="text/javascript" src="/static/ridi-token-refresher.js></script>
 
 ```
-
-## TODO
-- Write Docs
-- Dev Hot load Setting
