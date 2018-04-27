@@ -20,7 +20,7 @@ const getAccountDomain = memoize(() => {
 }, () => 'account-domain');
 
 export const getExpiresIn = async () => {
-  const response = await fetch(`https://account.${getAccountDomain()}/ridi/token/`, { method: 'POST' });
+  const response = await fetch(`https://account.${getAccountDomain()}/ridi/token/`, { method: 'POST', credentials: 'include' });
   const data = await response.json();
   return data.expires_in;
 };
