@@ -1,6 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 const path = require('path');
+
+const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
@@ -8,7 +10,7 @@ const srcPath = `${__dirname}/src`;
 const config = {
   context: srcPath,
   entry: {
-    ridi_token_refresher: ['@babel/polyfill', 'whatwg-fetch', `${srcPath}/index.js`],
+    ridi_token_refresher: ['whatwg-fetch', `${srcPath}/index.js`],
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -31,6 +33,9 @@ const config = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
+    new webpack.ProvidePlugin({
+      Promise: ['es6-promise', 'Promise']
+    }),
     new UglifyJSPlugin({
       sourceMap: true,
       uglifyOptions: {

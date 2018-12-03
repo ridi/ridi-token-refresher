@@ -11,6 +11,7 @@
   "author": "Jeonggeun Kim <snorlax@ridi.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/plugin-transform-regenerator": "^7.0.0",
     "@ridi/eslint-config": "^4.0.0",
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
@@ -28,7 +29,7 @@
     "webpack-cli": "^2.0.12"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.0.0",
+    "es6-promise": "^4.2.5",
     "whatwg-fetch": "^2.0.3"
   }
 }
