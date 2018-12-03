@@ -6,5 +6,5 @@
 
 # Usage
 ``` html
-<script type="text/javascript" src="/static/ridi-token-refresher.js"></script>
+<script src="dist/ridi_token_refresher.c8844321f6f0c574c1bc.js" integrity="sha384-uvzaPfvNBayxzpn0q4rKxwXgZAJoy3UPT0XYPAbEG0j1slw+ZBxTrp89yXvZZf0C" crossorigin="anonymous"></script>
 ```
