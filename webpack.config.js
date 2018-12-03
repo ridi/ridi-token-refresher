@@ -34,7 +34,7 @@ const config = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new webpack.ProvidePlugin({
-      Promise: ['es6-promise', 'Promise']
+      Promise: ['es6-promise', 'Promise'],
     }),
     new UglifyJSPlugin({
       sourceMap: true,

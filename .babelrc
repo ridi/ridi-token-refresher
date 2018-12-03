@@ -5,5 +5,11 @@
   "presets": [
     "es2015"
   ],
-  "plugins": ["@babel/plugin-transform-regenerator"]
+  "plugins": [
+    "babel-plugin-transform-regenerator",
+    ["babel-plugin-transform-runtime", {
+      "polyfill": false,
+      "regenerator": true
+    }]
+  ]
 }
