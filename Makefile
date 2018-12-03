@@ -12,3 +12,6 @@ test:
 
 build:
 	@yarn build
+
+integrity:
+	sh scripts/generate_integrity.sh $(DIST)
