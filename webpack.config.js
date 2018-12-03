@@ -1,6 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 const path = require('path');
+
+const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
@@ -31,6 +33,9 @@ const config = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
+    new webpack.ProvidePlugin({
+      Promise: ['es6-promise', 'Promise'],
+    }),
     new UglifyJSPlugin({
       sourceMap: true,
       uglifyOptions: {
