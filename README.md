@@ -6,8 +6,5 @@
 
 # Usage
 ``` html
-<!-- Must Load Babel-polyfill -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
-<script type="text/javascript" src="/static/ridi-token-refresher.js></script>
-
+<script src="dist/ridi_token_refresher.c8844321f6f0c574c1bc.js" integrity="sha384-uvzaPfvNBayxzpn0q4rKxwXgZAJoy3UPT0XYPAbEG0j1slw+ZBxTrp89yXvZZf0C" crossorigin="anonymous"></script>
 ```
