@@ -14,8 +14,8 @@ const config = {
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: '[name].js',
-    chunkFilename: '[name].js',
+    filename: '[name].[hash].js',
+    chunkFilename: '[name].[hash].js',
     sourceMapFilename: '[file].map',
   },
   devtool: 'source-map',
