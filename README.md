@@ -6,6 +6,6 @@
 
 # Usage
 ``` html
-<script src="/dist/ridi_token_refresher.c8844321f6f0c574c1bc.js" integrity="sha384-0OZhac5ElyAr4Fxh3moKAYZ7hBnWTkcfeERCeqdiKrYzmCmNe9ftiOCe4LszjbPA" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/gh/ridi/ridi-token-refresher@0.0.2/dist/ridi_token_refresher.c8844321f6f0c574c1bc.js" integrity="sha384-0OZhac5ElyAr4Fxh3moKAYZ7hBnWTkcfeERCeqdiKrYzmCmNe9ftiOCe4LszjbPA" crossorigin="anonymous"></script>
+<script src="/dist/0.0.2/ridi_token_refresher.js" integrity="sha384-LSgPc3PZpYQAyDfUEr0B5GudwTn4EeFroxe91RD1jIy57A6GsvB3DpbHvudjIeCu" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/ridi/ridi-token-refresher@master/dist/0.0.2/ridi_token_refresher.js" integrity="sha384-LSgPc3PZpYQAyDfUEr0B5GudwTn4EeFroxe91RD1jIy57A6GsvB3DpbHvudjIeCu" crossorigin="anonymous"></script>
 ```

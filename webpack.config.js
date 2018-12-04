@@ -13,9 +13,9 @@ const config = {
     ridi_token_refresher: ['whatwg-fetch', `${srcPath}/index.js`],
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: '[name].[hash].js',
-    chunkFilename: '[name].[hash].js',
+    path: path.resolve(__dirname, `./dist/${process.env.npm_package_version}`),
+    filename: '[name].js',
+    chunkFilename: '[name].js',
     sourceMapFilename: '[file].map',
   },
   devtool: 'source-map',
@@ -32,7 +32,7 @@ const config = {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin([`dist/${process.env.npm_package_version}`]),
     new webpack.ProvidePlugin({
       Promise: ['es6-promise', 'Promise'],
     }),
